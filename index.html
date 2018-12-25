@@ -34,6 +34,7 @@
 			var waiting = setInterval(function(){
 				if (earth.complete && clouds.complete && dark.complete){
 					clearInterval(waiting);
+					document.getElementById('wait').style.display='none';
 					play();
 				}
 			}, 100);
@@ -81,6 +82,9 @@
 </head>
 <body>
     <div>
+	<div id="wait">
+		Loading, Please wait a moment.
+	</div>
         <div id="canvas">
         </div>
     </div>
